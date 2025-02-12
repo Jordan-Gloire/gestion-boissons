@@ -107,7 +107,7 @@
     <!-- Pied de page -->
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Gestion des Ventes de Boissons - Tous droits réservés</p>
+            <p>&copy; 2025 Ana-Mart Gestion des Ventes de Boissons - Tous droits réservés</p>
         </div>
     </footer>
 
