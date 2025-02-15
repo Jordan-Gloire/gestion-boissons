@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\BoissonController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('boissons', BoissonController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
