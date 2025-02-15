@@ -22,6 +22,17 @@ Route::middleware('auth')->group(function () {
 });
 // Ajoute ces lignes dans ton fichier routes/web.php
 
+// Route::middleware('auth')->group(function () {
+//     // Liste des ventes pour un utilisateur
+//     Route::get('/ventes/{userId}', [VenteController::class, 'index'])->name('ventes.index');
+    
+//     // Formulaire pour ajouter une nouvelle vente
+//     Route::get('/ventes/create', [VenteController::class, 'create'])->name('ventes.create');
+    
+//     // Enregistrer une nouvelle vente
+//     Route::post('/ventes', [VenteController::class, 'store'])->name('ventes.store');
+// });
+
 Route::middleware('auth')->group(function () {
     // Liste des ventes pour un utilisateur
     Route::get('/ventes/{userId}', [VenteController::class, 'index'])->name('ventes.index');
@@ -31,6 +42,18 @@ Route::middleware('auth')->group(function () {
     
     // Enregistrer une nouvelle vente
     Route::post('/ventes', [VenteController::class, 'store'])->name('ventes.store');
+    
+    // Afficher les détails d'une vente spécifique
+    Route::get('/ventes/{id}', [VenteController::class, 'show'])->name('ventes.show');
+    
+    // Formulaire d'édition d'une vente
+    Route::get('/ventes/{id}/edit', [VenteController::class, 'edit'])->name('ventes.edit');
+    
+    // Mettre à jour une vente
+    Route::put('/ventes/{id}', [VenteController::class, 'update'])->name('ventes.update');
+    
+    // Supprimer une vente
+    Route::delete('/ventes/{id}', [VenteController::class, 'destroy'])->name('ventes.destroy');
 });
 
 

@@ -49,9 +49,9 @@
 
             <!-- Bouton pour ajouter une nouvelle vente -->
             <div class="mt-6 text-right">
-                <a href="{{ route('ventes.create') }}" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-sm hover:bg-green-700">
-                    Ajouter une vente
-                </a>
+                    <a href="{{ route('ventes.create') }}" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-sm hover:bg-green-700">
+                        Ajouter une vente
+                    </a>
             </div>
         </div>
     </div>
