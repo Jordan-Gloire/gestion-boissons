@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('nom');
             $table->string('type'); // Soda, Jus, Alcool, etc.
             $table->decimal('prix', 10, 2);
+            $table->integer('stock'); // Ajout de la colonne stock
             $table->timestamps();
         });
     }
+    
 
 
     /**

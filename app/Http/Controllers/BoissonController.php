@@ -66,11 +66,17 @@ use Illuminate\Http\Request;
 
 class BoissonController extends Controller
 {
+    // public function index()
+    // {
+    //     $boissons = Boisson::all();
+    //     return view('dashboard', compact('boissons')); // Remplacer 'boissons.index' par 'dashboard'
+    // }
     public function index()
     {
         $boissons = Boisson::all();
-        return view('boissons.index', compact('boissons'));
+        return view('dashboard', compact('boissons'));  // Assure-toi que 'dashboard' est bien la bonne vue
     }
+
 
     public function create()
     {

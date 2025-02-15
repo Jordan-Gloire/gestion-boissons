@@ -56,7 +56,7 @@
 
                         <div>
                             <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{{ $boisson->nom }}</h2>
-                            <p class="text-gray-600 dark:text-gray-400">{{ number_format($boisson->prix, 2) }} €</p>
+                            <p class="text-gray-600 dark:text-gray-400">{{ number_format($boisson->prix, 2) }} XAF</p>
                         </div>
                     </div>
 

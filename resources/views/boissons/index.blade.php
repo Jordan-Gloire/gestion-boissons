@@ -31,13 +31,16 @@
                             @elseif ($boisson->type == 'bière') 🍺
                             @else 🥛 @endif
                         </span>
-
+        
                         <div>
                             <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{{ $boisson->nom }}</h2>
                             <p class="text-gray-600 dark:text-gray-400">{{ number_format($boisson->prix, 2) }} €</p>
+                            <!-- Ajout du stock et type -->
+                            <p class="text-gray-600 dark:text-gray-400">Stock: {{ $boisson->stock }}</p>
+                            <p class="text-gray-600 dark:text-gray-400">Type: {{ ucfirst($boisson->type) }}</p>
                         </div>
                     </div>
-
+        
                     <!-- Boutons d'actions -->
                     <div class="space-x-2">
                         <a href="{{ route('boissons.edit', $boisson) }}" class="text-green-500 hover:text-green-700">
@@ -54,6 +57,7 @@
                 </li>
             @endforeach
         </ul>
+        
     </div>
 </div>
 @endsection
