@@ -14,7 +14,7 @@
 
         <!-- Bouton d'ajout -->
         <div class="mb-4 text-right ">
-            <a href="{{ route('boissons.create') }}" class="px-6 py-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
+            <a href="{{ route('boissons.create') }}" class="px-6  py-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
                 <i class="fas fa-plus-circle"></i> Ajouter une boisson
             </a>            
         </div>
@@ -34,7 +34,7 @@
         
                         <div>
                             <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{{ $boisson->nom }}</h2>
-                            <p class="text-gray-600 dark:text-gray-400">{{ number_format($boisson->prix, 2) }} €</p>
+                            <p class="text-gray-600 dark:text-gray-400">{{ number_format($boisson->prix) }} frs</p>
                             <!-- Ajout du stock et type -->
                             <p class="text-gray-600 dark:text-gray-400">Stock: {{ $boisson->stock }}</p>
                             <p class="text-gray-600 dark:text-gray-400">Type: {{ ucfirst($boisson->type) }}</p>

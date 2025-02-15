@@ -34,15 +34,24 @@
     <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
         <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">🍹 Liste des Boissons</h1>
 
-        <!-- Bouton d'ajout -->
-        <div class="mb-4 text-right ">
+       <div class="flex flex-col space-y-4">
+         <!-- Bouton d'ajout de boisson -->
+         <div class="mb-4 text-right">
             <a href="{{ route('boissons.create') }}" class="px-6 py-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
                 <i class="fas fa-plus-circle"></i> Ajouter une boisson
-            </a>            
+            </a>
         </div>
 
+        <!-- Bouton d'ajout de vente -->
+        <div class="mb-4 text-right">
+            <a href="{{ route('ventes.create') }}" class="px-6 py-3 bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
+                <i class="fas fa-plus-circle"></i> Ajouter une vente
+            </a>
+        </div>
+       </div>
+
         <!-- Liste des boissons -->
-        <ul class="space-y-4">
+        {{-- <ul class="space-y-4">
             @foreach ($boissons as $boisson)
                 <li class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow">
                     <div class="flex items-center space-x-4">
@@ -75,7 +84,8 @@
                     </div>
                 </li>
             @endforeach
-        </ul>
+        </ul> --}}
     </div>
 </div>
+
 @endsection
